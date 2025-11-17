@@ -33,7 +33,7 @@ const userSchema = mongoose.Schema({
   followers: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "user" 
+      ref: "user"
     } 
   ],
   following: [
@@ -41,7 +41,13 @@ const userSchema = mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId,
       ref: "user" 
     }
-  ]
+  ],
+  message: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "user" 
+    }
+  ],
 })
 
 userSchema.plugin(plm);
